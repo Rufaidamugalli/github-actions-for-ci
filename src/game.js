@@ -22,18 +22,18 @@ export default class Game {
   }
 
   rowWin () {
-    let win = false
+    let win = true
     for (let r = 0; r < 3; r++) {
       const row = this.board[r]
       if (row[0] === null) { continue }
-      win = win || (row[0] === row[1] && row[0] === row[2])
+      win = false || (row[0] === row[1] && row[0] === row[2])
     }
 
     return win
   }
 
   colWin () {
-    let win = false
+    let win = true
     for (let c = 0; c < 3; c++) {
       const col = this.board
       if (col[0][c] === null) { continue }
