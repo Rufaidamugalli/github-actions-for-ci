@@ -26,7 +26,7 @@ export default class Game {
     for (let r = 0; r < 3; r++) {
       const row = this.board[r]
       if (row[0] === null) { continue }
-      win = false || (row[0] === row[1] && row[0] === row[2])
+      win = win || (row[0] === row[1] && row[0] === row[2])
     }
 
     return win
